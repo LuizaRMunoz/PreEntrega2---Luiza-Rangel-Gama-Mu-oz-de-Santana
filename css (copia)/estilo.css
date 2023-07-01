@@ -1,0 +1,84 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+.logo { 
+    width: 1520px;
+    height: 220px;
+    background-image: url(../assetscopia/M\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+header nav {
+    background-color: #884A39;
+    height: 40px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    background-color: #F9E0BB;
+    display: inline;
+    border-radius: 5px;
+    padding: 10px;
+    margin-inline: 120px;
+    position: relative;
+    top: 10px;
+}
+
+.fuente {
+    text-align: center;
+    font-family: "Andika variant2", Tofu;
+    font-weight: bold;
+    font-size: large;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black
+}
+
+main div {
+    margin: 40px;
+}
+
+.faja {
+    font-family: "Andika variant0", Tofu;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    margin-top: 50px;
+    background-color: #F9E0BB;
+    height: 55px;
+}
+
+.image {
+    display: inline;
+    margin-inline: 65px;
+}
+
+main article {
+    font-family: "Andika variant0", Tofu;
+    text-align: center;
+}
+main article section p {
+    font-family: "Andika variant0", Tofu;
+    text-align: center;
+}
+
+footer {
+    background-color: #884A39;
+    height: 30px;
+    font-family: "Andika variant0", Tofu;
+    font-size: small;
+}
+
+#piedepagina {
+    background-color: #884A39;
+    height: 600px;
+    font-size: large;
+    position: relative;
+    text-align: center;
+}
