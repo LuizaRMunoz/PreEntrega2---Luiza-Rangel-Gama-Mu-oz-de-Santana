@@ -99,10 +99,19 @@ main article section p {
 }
 
 footer {
-    background-color: #884A39;
-    height: 30px;
-    font-family: "Andika variant0", Tofu;
-    font-size: small;
+    background-color: #a97364;
+    height: 40px;
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: large;
+    line-height: initial;
+    transition-duration: 350ms;
 }
 
 #piedepagina {
