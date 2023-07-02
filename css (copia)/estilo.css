@@ -8,6 +8,11 @@ body {
     display: grid;
     grid-template-rows: 1fr 2fr 0.5fr;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainindex mainindex mainindex"
+    "footerindex footerindex footerindex"
+    ;
 }
 
 #logo {
@@ -51,22 +56,16 @@ header nav ul li a {
     transition-duration: 350ms;
 }
 
-#mainindex {
-    margin: 40px;
+main {
+    grid-area: mainindex;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.contenedor{
-    position: relative;
 }
 
 .contenido{ 
     position: absolute;
     top: 50%;
+    left: 67%;
     transform: translate(-50%, -50%);
     transition-property: opacity, transform;
     font-weight: 200;
@@ -106,8 +105,7 @@ main article section p {
 }
 
 footer {
-    background-color: #a97364;
-    height: 40px;
+    background-color: #cbb088;
     transition-property: opacity, transform;
     font-weight: 200;
     font-style: normal;
@@ -119,7 +117,9 @@ footer {
     font-size: large;
     line-height: initial;
     transition-duration: 350ms;
+    grid-area: footerindex;
 }
+
 
 #piedepagina {
     background-color: #884A39;
