@@ -57,7 +57,7 @@ header nav ul li a {
     position: relative;
 }
 
-.contenido{
+.contenido{ 
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -73,7 +73,6 @@ header nav ul li a {
     line-height: initial;
     transition-duration: 350ms;
 }
-
 
 .faja {
     font-family: "Andika variant0", Tofu;
