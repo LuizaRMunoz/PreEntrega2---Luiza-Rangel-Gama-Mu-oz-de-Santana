@@ -25,6 +25,17 @@
     "footerindex footerindex footerindex"
 }
 
+#bodytips {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "maintips maintips maintips"
+    "footerindex footerindex footerindex"
+    ;
+}
+
 #logo {
     height: 220px;
     display: flex;
@@ -118,14 +129,47 @@ header nav ul li a {
     object-fit: cover;
 }
 
-
-main article {
-    font-family: "Andika variant0", Tofu;
-    text-align: center;
+.maintips {
+    grid-area: maintips;
+    margin-top: 3%;
 }
-main article section p {
-    font-family: "Andika variant0", Tofu;
+
+.maintips article {
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: large;
+    line-height: initial;
+    transition-duration: 350ms;
     text-align: center;
+    grid-area: texttips;
+}
+
+.maintips div nav ul {
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: large;
+    line-height: initial;
+    transition-duration: 350ms;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    grid-area: opciontips;
 }
 
 footer {
@@ -143,7 +187,6 @@ footer {
     transition-duration: 350ms;
     grid-area: footerindex;
 }
-
 
 #piedepagina {
     background-color: #884A39;
