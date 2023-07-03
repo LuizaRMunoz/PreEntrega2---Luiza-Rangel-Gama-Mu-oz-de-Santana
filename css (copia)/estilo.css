@@ -128,3 +128,56 @@ footer {
     position: relative;
     text-align: center;
 }
+
+@media screen and (max-width: 320px) {
+ 
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    #contenedor {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .contenido{ 
+        position: absolute;
+        top: 70%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        transition-property: opacity, transform;
+        font-weight: 200;
+        font-style: normal;
+        font-stretch: normal;
+        font-optical-sizing: auto;
+        text-align: start;
+        opacity: 1;
+        font-family: "Oswald variant0", Tofu;
+        font-size: medium;
+        line-height: initial;
+        transition-duration: 350ms;  
+    }
+    
+    footer {
+        background-color: #cbb088;
+        transition-property: opacity, transform;
+        font-weight: 200;
+        font-style: normal;
+        font-stretch: normal;
+        font-optical-sizing: auto;
+        text-align: start;
+        opacity: 1;
+        font-family: "Oswald variant0", Tofu;
+        font-size: small;
+        line-height: initial;
+        transition-duration: 350ms;
+        grid-area: footerindex;
+    }
+}
