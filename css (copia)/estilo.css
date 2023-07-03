@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+#bodyindex {
     display: grid;
     grid-template-rows: 1fr 2fr 0.5fr;
     grid-template-columns: repeat(3, 1fr);
@@ -13,6 +13,16 @@ body {
     "mainindex mainindex mainindex"
     "footerindex footerindex footerindex"
     ;
+}
+
+#bodypromo {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.6fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainpromo mainpromo mainpromo"
+    "footerindex footerindex footerindex"
 }
 
 #logo {
@@ -56,10 +66,15 @@ header nav ul li a {
     transition-duration: 350ms;
 }
 
-main {
+#mainindex {
     grid-area: mainindex;
     display: flex;
     justify-content: center;
+}
+
+#contenedor {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .contenido{ 
@@ -81,19 +96,28 @@ main {
 }
 
 .faja {
-    font-family: "Andika variant0", Tofu;
-    text-align: center;
-    position: relative;
-    top: 10px;
-    margin-top: 50px;
     background-color: #F9E0BB;
-    height: 55px;
+    display: flex;
+    justify-content: center;
 }
 
-.image {
-    display: inline;
-    margin-inline: 65px;
+.mainpromo{
+    grid-area: mainpromo; 
+    margin-top: 3%;
 }
+
+.mainpromo section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1rem;
+}
+
+.mainpromo section img {
+    width: 20%;
+    object-fit: cover;
+}
+
 
 main article {
     font-family: "Andika variant0", Tofu;
@@ -114,7 +138,7 @@ footer {
     text-align: start;
     opacity: 1;
     font-family: "Oswald variant0", Tofu;
-    font-size: large;
+    font-size: medium;
     line-height: initial;
     transition-duration: 350ms;
     grid-area: footerindex;
@@ -179,5 +203,35 @@ footer {
         line-height: initial;
         transition-duration: 350ms;
         grid-area: footerindex;
+    }
+
+    #bodypromo {
+        display: grid;
+        grid-template-rows: 0.5fr 2.2fr 0.6fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "headerindex headerindex headerindex"
+        "mainpromo mainpromo mainpromo"
+        "footerindex footerindex footerindex"
+    }
+
+    .faja {
+        background-color: #F9E0BB;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .mainpromo section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 3rem;
+        column-gap: 6rem;
+    }
+    
+    .mainpromo section img {
+        width: 27%;
+        object-fit: cover;
     }
 }
