@@ -36,6 +36,17 @@
     ;
 }
 
+#bodyreg {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainreg mainreg mainreg"
+    "footerindex footerindex footerindex"
+    ;
+}
+
 #logo {
     height: 220px;
     display: flex;
@@ -147,7 +158,6 @@ header nav ul li a {
     line-height: initial;
     transition-duration: 350ms;
     text-align: center;
-    grid-area: texttips;
 }
 
 .maintips div nav ul {
@@ -169,7 +179,56 @@ header nav ul li a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    grid-area: opciontips;
+}
+
+.mainreg {
+    grid-area: mainreg;
+    margin-top: 3%;
+}
+
+.mainreg article h1 {
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: large;
+    line-height: initial;
+    transition-duration: 350ms;
+    text-align: center;
+}
+
+.mainreg div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1rem;
+}
+
+.mainreg div img {
+    width: 30%;
+    object-fit: cover;
+}
+
+.section1reg {
+    position: absolute;
+    width: 70%;
+    left: 11%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+}
+
+.section2reg {
+    position: absolute;
+    width: 70%;
+    right: 11%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
 }
 
 footer {
