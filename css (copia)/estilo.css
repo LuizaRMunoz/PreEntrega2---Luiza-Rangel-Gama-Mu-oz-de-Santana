@@ -58,15 +58,15 @@
     ;
 }
 
-header {
-    grid-area: headerindex;
-}
-
 #logo {
     height: 220px;
     display: flex;
     justify-content: center;
     align-content: center;  
+}
+
+header {
+    grid-area: headerindex;
 }
 
 header nav ul {
