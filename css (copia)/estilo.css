@@ -47,15 +47,26 @@
     ;
 }
 
+#bodyayc {
+    display: grid;
+    grid-template-rows: 1fr 0.8fr 1.16fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainayc mainayc mainayc"
+    "footerayc footerayc footerayc"
+    ;
+}
+
+header {
+    grid-area: headerindex;
+}
+
 #logo {
     height: 220px;
     display: flex;
     justify-content: center;
     align-content: center;  
-}
-
-header {
-    grid-area: headerindex;
 }
 
 header nav ul {
@@ -231,6 +242,12 @@ header nav ul li a {
     justify-content: left;
 }
 
+.mainayc {
+    grid-area: mainayc;
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     background-color: #cbb088;
     transition-property: opacity, transform;
@@ -248,11 +265,31 @@ footer {
 }
 
 #piedepagina {
-    background-color: #884A39;
-    height: 600px;
+    background-color: #cbb088;
     font-size: large;
-    position: relative;
-    text-align: center;
+    grid-area: footerayc;
+}
+
+.navfooter1 {
+    position: absolute;
+    width: 70%;
+    right: 11%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.navfooter2 {
+    position: absolute;
+    width: 70%;
+    left: 11%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: flex-end;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 320px) {
