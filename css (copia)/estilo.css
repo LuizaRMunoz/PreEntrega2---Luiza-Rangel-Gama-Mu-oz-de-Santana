@@ -63,12 +63,19 @@ header {
     display: grid;
     justify-content: center;
     align-items: center;
+    
 }
 
-#logo {
-   width: 75%;
-   margin: 0 auto; 
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
 }   
+
+header div img {
+    width: 50%;
+}
 
 header nav ul {
     display: flex;
@@ -98,7 +105,7 @@ header nav ul li a {
     transition-duration: 350ms;
 }
 
-#mainindex {
+.mainindex {
     grid-area: mainindex;
     display: flex;
     justify-content: center;
@@ -110,9 +117,26 @@ header nav ul li a {
     margin: 0 auto;
 }
 
-.contenido{ 
+.contenido1 { 
     position: absolute;
-    top: 75%;
+    top: 70%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: large;
+    line-height: initial;
+    transition-duration: 350ms;
+}
+.contenido2 {
+    position: absolute;
+    top: 77%;
     left: 67%;
     transform: translate(-50%, -50%);
     transition-property: opacity, transform;
@@ -141,9 +165,9 @@ header nav ul li a {
 
 .mainpromo section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    row-gap: 1rem;
+    width: 90%;
+    margin: auto;
 }
 
 .mainpromo section img {
@@ -258,7 +282,7 @@ footer {
     text-align: start;
     opacity: 1;
     font-family: "Oswald variant0", Tofu;
-    font-size: medium;
+    font-size: small;
     line-height: initial;
     transition-duration: 350ms;
     grid-area: footerindex;
@@ -294,38 +318,47 @@ footer {
 
 @media screen and (max-width: 320px) {
 
-    header nav ul li a {
-    text-decoration: none;
-    color: black;
-    transition-property: opacity, transform;
-    font-weight: 200;
-    font-style: normal;
-    font-stretch: normal;
-    font-optical-sizing: auto;
-    text-align: start;
-    opacity: 1;
-    font-family: "Oswald variant0", Tofu;
-    font-size: small;
-    line-height: initial;
-    transition-duration: 350ms;
-}  
-
-    #mainindex .contenido p{ 
+#contenedor {
     position: relative;
-    transform: translate(-50%, -50%);
-    transition-property: opacity, transform;
-    font-weight: 200;
-    font-style: normal;
-    font-stretch: normal;
-    font-optical-sizing: auto;
-    text-align: start;
-    opacity: 1;
-    font-family: "Oswald variant0", Tofu;
-    font-size: small;
-    line-height: initial;
-    transition-duration: 350ms;
+    left: 46%;
+    width: 70%;
+    margin: 0 auto;
+    }
+.mainindex, .contenido1 {
+    position: relative;
+    right: 45%;
+}
+.mainindex, .contenido2 {
+     position: relative;
+    
 }
 }
+@media screen and (max-width: 468px){
+    header nav ul li a {
+        font-size: small;  
+    }
+
+    .mainindex .contenido1 { 
+        position: absolute;
+        top: 71%;
+        left: 74%;
+        font-size: small;
+        color: rgb(131, 127, 127);
+    }
+
+    .mainindex .contenido2 {
+        position: absolute;
+        top: 82%;
+        left: 75%;
+        font-size: small;
+        color: rgb(131, 127, 127);
+    }
+
+    .faja, h2{
+        font-size: medium;
+    }
+}
+    
 
 @media screen and (max-width: 768px) {
     #contenedor {
@@ -333,38 +366,18 @@ footer {
         margin: 0 auto;
     }
 
-    .contenido{ 
+    .contenido1{ 
         position: absolute;
-        top: 83%;
+        top: 77%;
         left: 75%;
-        transform: translate(-50%, -50%);
-        transition-property: opacity, transform;
-        font-weight: 200;
-        font-style: normal;
-        font-stretch: normal;
-        font-optical-sizing: auto;
-        text-align: start;
-        opacity: 1;
-        font-family: "Oswald variant0", Tofu;
         font-size: medium;
-        line-height: initial;
-        transition-duration: 350ms;  
+       
     }
-    
-    footer {
-        background-color: #cbb088;
-        transition-property: opacity, transform;
-        font-weight: 200;
-        font-style: normal;
-        font-stretch: normal;
-        font-optical-sizing: auto;
-        text-align: start;
-        opacity: 1;
-        font-family: "Oswald variant0", Tofu;
-        font-size: small;
-        line-height: initial;
-        transition-duration: 350ms;
-        grid-area: footerindex;
+    .contenido2{ 
+        position: absolute;
+        top: 86%;
+        left: 76%;
+        font-size: medium;
     }
 
     #bodypromo {
@@ -375,13 +388,6 @@ footer {
         "headerindex headerindex headerindex"
         "mainpromo mainpromo mainpromo"
         "footerindex footerindex footerindex"
-    }
-
-    .faja {
-        background-color: #F9E0BB;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
     }
     
     .mainpromo section {
