@@ -58,21 +58,20 @@
     ;
 }
 
-#logo {
-    height: 220px;
-    display: flex;
-    justify-content: center;
-    align-content: center;  
-}
-
 header {
     grid-area: headerindex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+
+#logo {
+   width: 75%;
+   margin: 0 auto; 
+}   
 
 header nav ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
 }
@@ -103,6 +102,7 @@ header nav ul li a {
     grid-area: mainindex;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #contenedor {
@@ -112,7 +112,7 @@ header nav ul li a {
 
 .contenido{ 
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 67%;
     transform: translate(-50%, -50%);
     transition-property: opacity, transform;
@@ -293,15 +293,38 @@ footer {
 }
 
 @media screen and (max-width: 320px) {
- 
-}
 
-@media screen and (max-width: 480px) {
-    
-}
+    header nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: small;
+    line-height: initial;
+    transition-duration: 350ms;
+}  
 
-@media screen and (max-width: 600px) {
-    
+    #mainindex .contenido p{ 
+    position: relative;
+    transform: translate(-50%, -50%);
+    transition-property: opacity, transform;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    text-align: start;
+    opacity: 1;
+    font-family: "Oswald variant0", Tofu;
+    font-size: small;
+    line-height: initial;
+    transition-duration: 350ms;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -312,7 +335,7 @@ footer {
 
     .contenido{ 
         position: absolute;
-        top: 70%;
+        top: 83%;
         left: 75%;
         transform: translate(-50%, -50%);
         transition-property: opacity, transform;
