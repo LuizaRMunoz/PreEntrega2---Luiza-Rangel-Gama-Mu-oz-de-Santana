@@ -110,6 +110,7 @@ header nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #contenedor {
@@ -117,28 +118,7 @@ header nav ul li a {
     margin: 0 auto;
 }
 
-.contenido1 { 
-    position: absolute;
-    top: 70%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-    transition-property: opacity, transform;
-    font-weight: 200;
-    font-style: normal;
-    font-stretch: normal;
-    font-optical-sizing: auto;
-    text-align: start;
-    opacity: 1;
-    font-family: "Oswald variant0", Tofu;
-    font-size: large;
-    line-height: initial;
-    transition-duration: 350ms;
-}
-.contenido2 {
-    position: absolute;
-    top: 77%;
-    left: 67%;
-    transform: translate(-50%, -50%);
+.contenido { 
     transition-property: opacity, transform;
     font-weight: 200;
     font-style: normal;
@@ -152,10 +132,12 @@ header nav ul li a {
     transition-duration: 350ms;
 }
 
+
 .faja {
     background-color: #F9E0BB;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
 .mainpromo{
@@ -292,66 +274,32 @@ footer {
     background-color: #cbb088;
     font-size: large;
     grid-area: footerayc;
+    display: flex;
+    flex-direction: column;
 }
 
 .navfooter1 {
-    position: absolute;
-    width: 70%;
-    right: 11%;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 }
 
 .navfooter2 {
-    position: absolute;
-    width: 70%;
-    left: 11%;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-content: flex-end;
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 320px) {
-
-#contenedor {
-    position: relative;
-    left: 46%;
-    width: 70%;
-    margin: 0 auto;
-    }
-.mainindex, .contenido1 {
-    position: relative;
-    right: 45%;
-}
-.mainindex, .contenido2 {
-     position: relative;
-    
-}
-}
 @media screen and (max-width: 468px){
     header nav ul li a {
         font-size: small;  
     }
 
-    .mainindex .contenido1 { 
-        position: absolute;
-        top: 71%;
-        left: 74%;
-        font-size: small;
-        color: rgb(131, 127, 127);
+    .mainindex div h1 {
+        font-size: large;
     }
-
-    .mainindex .contenido2 {
-        position: absolute;
-        top: 82%;
-        left: 75%;
-        font-size: small;
-        color: rgb(131, 127, 127);
+    .mainindex div p {
+        font-size: medium;
     }
 
     .faja, h2{
@@ -364,30 +312,6 @@ footer {
     #contenedor {
         width: 85%;
         margin: 0 auto;
-    }
-
-    .contenido1{ 
-        position: absolute;
-        top: 77%;
-        left: 75%;
-        font-size: medium;
-       
-    }
-    .contenido2{ 
-        position: absolute;
-        top: 86%;
-        left: 76%;
-        font-size: medium;
-    }
-
-    #bodypromo {
-        display: grid;
-        grid-template-rows: 0.5fr 2.2fr 0.6fr;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        "headerindex headerindex headerindex"
-        "mainpromo mainpromo mainpromo"
-        "footerindex footerindex footerindex"
     }
     
     .mainpromo section {
